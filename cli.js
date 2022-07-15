@@ -6,8 +6,11 @@ const caminho = process.argv
 
 async function processaTexto(caminho) {
     const resultado = await pegaArquivo(caminho[2])
-    if (caminho[3] === 'validar'){
-        console.log(chalk.green('links validados: '), validaURLs(resultado)) 
+    if (caminho[3] === 'validar') {
+        console.log(
+            chalk.green('links validados: '),
+            await validaURLs(resultado)
+        )
         return
     }
     console.log(chalk.yellow('lista de links'), resultado)
