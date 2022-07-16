@@ -1,14 +1,18 @@
 {
   "dependencies": {
-    "chalk": "^5.0.1",
+    "chalk": "^4.1.2",
+    "nuxt3": "latest",
     "node-fetch": "^3.2.8"
+  },
+  "resolutions": {
+    "chalk": "^4.1.2"
   },
   "name": "lib-markdown",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest ./test",
     "cli": "node cli.js ./arquivos/teste.md"
   },
   "keywords": [],
@@ -21,6 +25,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^28.1.3",
     "prettier": "^2.7.1"
   }
 }

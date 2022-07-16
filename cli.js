@@ -1,6 +1,11 @@
-import chalk from 'chalk'
-import { pegaArquivo } from './index.js'
-import validaURLs from './http-validação.js'
+#!/usr/bin/env node
+// import chalk from 'chalk'
+// import { pegaArquivo } from './index.js'
+// import validaURLs from './http-validação.js'
+
+const chalk = require('chalk')
+const pegaArquivo = require('./index.js')
+const validaURLs = require('./http-validação.js')
 
 const caminho = process.argv
 

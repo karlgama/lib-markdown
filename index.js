@@ -1,5 +1,6 @@
-import chalk from 'chalk'
-import fs from 'fs'
+// import fs from 'fs'
+const fs = require('fs')
+const { Module } = require('module')
 
 const regex = /\[([^\]]*)\]\((https?:\/\/[^$#\s].[^\s]*)\)/gm
 function trataErro(erro) {
@@ -17,7 +18,7 @@ function extraiLinks(texto) {
     return results.length === 0 ? 'não há links' : results
 }
 
-export async function pegaArquivo(caminho) {
+async function pegaArquivo(caminho) {
     try {
         const encoding = 'utf-8'
         const texto = await fs.promises.readFile(caminho, encoding)
@@ -27,3 +28,4 @@ export async function pegaArquivo(caminho) {
     }
 }
 
+module.exports = pegaArquivo;
